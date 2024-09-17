@@ -18,10 +18,33 @@ app.get('/', (req, res) => {
 //http://localhost:5000/cliente
 //La linea siguiente es un endpoint
 app.get('/cliente', (req, res) => {
-    
-    res.send("End point para todos los clientes")
+    let listadoClientes = clientes
+
+    res.json(   listadoClientes)
 })
 
+//http://localhost:5000/cliente/1
+app.get("/cliente/:id_cliente", (req, res) =>  {
+
+    //console.log(req.params)
+
+    let idCliente = parseInt(req.params.id_cliente)
+    console.log( idCliente, "tipo`de datos que viaja `por la url")
+    //console.log(idCliente, "Esta es la nueva variable")
+    let listClientes = clientes
+
+    for(let i= 0; i < listClientes.length; i++) {
+
+        console.log(listClientes[i].id, "id del cliente", idCliente)
+        if(listClientes[i].id === idCliente){
+            console.log("Accede al if")
+            res.json()
+            return 
+        }
+    }
+
+    res.json({"message": "el cliente no existe"})
+})
 
 app.listen(PUERTO, () => {
     console.log('corriendo por el puerto ', PUERTO)
