@@ -19,7 +19,6 @@ app.get('/', (req, res) => {
 //La linea siguiente es un endpoint
 app.get('/cliente', (req, res) => {
     let listadoClientes = clientes
-
     res.json(   listadoClientes)
 })
 
@@ -38,13 +37,21 @@ app.get("/cliente/:id_cliente", (req, res) =>  {
         console.log(listClientes[i].id, "id del cliente", idCliente)
         if(listClientes[i].id === idCliente){
             console.log("Accede al if")
-            res.json()
+            res.json( { "cliente": listClientes[i]})
             return 
         }
     }
 
     res.json({"message": "el cliente no existe"})
 })
+
+app.post("/cliente", (req, res) => {
+
+    let body = req.params.body
+    
+    res.json()
+})
+
 
 app.listen(PUERTO, () => {
     console.log('corriendo por el puerto ', PUERTO)
