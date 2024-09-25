@@ -1,8 +1,19 @@
-##Crear un cliente especifico
+###Crear un cliente especifico
 POST http://localhost:5000/cliente
 content-type: application/json
 
 {
-    "name": "sample",
-    "time": "Wed, 21 Oct 2015 18:27:50 GMT"
+    
+    "nombre": "Esteba",
+    "Apellido":"Quito",
+    "email":"estebanQuito@gmail.com"    
 }
+
+###
+GET http://localhost:5000/cliente
+
+
+
+###Crear un cliente especifico
+DELETE  http://localhost:5000/cliente/1
+

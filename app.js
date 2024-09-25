@@ -1,7 +1,10 @@
 import express from "express"
 import clientes from "./clientes.js"
+import { corsCafe } from "./corsWebCafe.js"
 
 const app = express()
+app.use(express.json())
+app.use(corsCafe()); 
 const PUERTO = 5000
 
 
@@ -47,9 +50,60 @@ app.get("/cliente/:id_cliente", (req, res) =>  {
 
 app.post("/cliente", (req, res) => {
 
-    let body = req.params.body
+    let bodyCliente = req.body
+
+    let  idCliente = clientes.length
+    idCliente++
+
+    let newCliente = {
+        ...{"id":idCliente}, 
+        ...bodyCliente
+    }
+    clientes.push(newCliente)
     
-    res.json()
+    res.json({"message ": `nuevo cliente registrado ${idCliente}`})
+})
+
+app.put("/cliente/:id_cliente", (req, res) => {
+
+    let idCliente = parseInt(req.params.id_cliente)
+    let bodyClienteModf = req.body
+
+
+    for(let i= 0; i < clientes.length; i++) {
+
+        if(clientes[i].id === idCliente){
+            let clienteModificado  = {
+                ...{"id": clientes[i].id},
+                ...bodyClienteModf
+            }
+            clientes[i] =  clienteModificado
+            console.log(clientes)
+            return res.json({"message":`El cliente ${clientes[i].id} ha sido actualizado correctamente`})
+        }
+    }
+
+
+    res.json({"message":"El cliente que intenta actualizar no existe"})
+})
+
+app.delete("/cliente/:id_cliente", (req, res) => {
+    console.log("eliminar");
+    
+
+    let idCliente = parseInt(req.params.id_cliente)
+
+
+    for(let i= 0; i < clientes.length; i++) {
+
+        if(clientes[i].id === idCliente){
+            let id =  clientes[i].id
+            clientes.splice(i,1)
+            return res.json({"message":`El cliente ${id} ha sido eliminado correctamente`})
+        }
+    }
+
+    res.json({"message":"El cliente que intenta eliminar no existe"})
 })
 
 
