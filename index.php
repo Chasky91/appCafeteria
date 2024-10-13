@@ -6,12 +6,12 @@
     <title>Document</title>
 </head>
 <script>
-    
-
+      const url = "https://localhost:5000/cliente";
+    console.log(url)
 </script>
 <body>
     <main>
-
+    <h1> Cafeteria</h1>
     </main>
 </body>
 </html>

@@ -2,7 +2,40 @@
 POST http://localhost:5000/cliente
 content-type: application/json
 
+ {
+        "nombre": "Estefanis",
+        "Apellido":"Quito",
+        "email":"estebanQuito@gmail.com"
+    } 
+
+###
+GET http://localhost:5000/cliente/4
+
+###
+GET http://localhost:5000/cliente
+
+###
+PUT http://localhost:5000/cliente/4
+content-type: application/json
+
+ {
+    "nombre": "",
+    "email": "FErnando.Estelar@example.com",
+    "Apellido":"Estelar"
+} 
+
+###
+POST http://localhost:5000/cliente
+content-type: application/json
+
 {
-    "name": "sample",
-    "time": "Wed, 21 Oct 2015 18:27:50 GMT"
+    "nombre": "Raul ",
+    "apellido":"Lazaro",
+    "email": "joselo.gomezexample.com",
+    "cargo":""
+
 }
+
+
+
+
