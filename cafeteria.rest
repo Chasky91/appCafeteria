@@ -4,8 +4,9 @@ content-type: application/json
 
  {
         "nombre": "Estefanis",
-        "Apellido":"Quito",
-        "email":"estebanQuito@gmail.com"
+        "apellido":"Quito",
+        "email":"estebanQuito@gmail.com",
+        "cargo":"obrera"
     } 
 
 ###

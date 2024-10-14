@@ -91,7 +91,8 @@ app.post("/cliente", (req, res) => {
         ...resultado.data
     }
 
-    clientes.splice(clientes.length-1,0,nuevo)
+    //clientes.splice(clientes.length-1,0,nuevo)
+    clientes.push(nuevo)
 
     res.status(201).json({"mensaje":nuevo})
 })
