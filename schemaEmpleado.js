@@ -27,10 +27,10 @@ const empleadoSchema = z.object({
 })
 
 const validacionCompleta  = (cli) => {
-    return clienteSchema.safeParse(cli)
+    return empleadoSchema.safeParse(cli)
 }
 
 const validacionParcial  = (cli) => {
-    return clienteSchema.partial().safeParse(cli)
+    return empleadoSchema.partial().safeParse(cli)
 }
 export { validacionCompleta, validacionParcial}

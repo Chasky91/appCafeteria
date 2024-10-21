@@ -40,7 +40,7 @@ content-type: application/json
 
 
 ###
-GET http://localhost:5000/empleados
+GET http://localhost:5000/empleados/
 
 
 ###
