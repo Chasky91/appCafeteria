@@ -1,0 +1,39 @@
+###
+GET http://localhost:5000/ordenes
+
+
+###
+GET http://localhost:5000/ordenes/2
+
+###
+GET http://localhost:5000/ordenes
+
+###
+POST http://localhost:5000/ordenes
+content-type: application/json
+
+{
+    "fecha": "2024-10-18",
+    "items": [1,2],
+    "mesa": 5,
+    "cliente": 1,
+    "estado": "Completada",
+    "total": 35000.55
+}
+
+
+###
+DELETE  http://localhost:5000/ordenes/1
+
+###
+PUT  http://localhost:5000/ordenes/1
+content-type: application/json
+
+{
+    "fecha": "2024-10-18",
+    "items": [11,2],
+    "mesa": 8,
+    "cliente": 1,
+    "estado": "Completada",
+    "total": 3500.55
+}

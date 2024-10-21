@@ -1,0 +1,74 @@
+###Crear un cliente especifico
+POST http://localhost:5000/cliente
+content-type: application/json
+
+ {
+        "nombre": "Estefanis",
+        "apellido":"Quito",
+        "email":"estebanQuito@gmail.com",
+        "cargo":"obrera"
+    } 
+
+###
+GET http://localhost:5000/cliente/4
+
+###
+GET http://localhost:5000/cliente
+
+###
+PUT http://localhost:5000/cliente/4
+content-type: application/json
+
+ {
+    "nombre": "",
+    "email": "FErnando.Estelar@example.com",
+    "Apellido":"Estelar"
+} 
+
+###
+POST http://localhost:5000/cliente
+content-type: application/json
+
+{
+    "nombre": "Raul ",
+    "apellido":"Francia",
+    "email": "joselo.gomez@example.com",
+    "cargo":""
+
+}
+
+
+
+###
+GET http://localhost:5000/empleados
+
+
+###
+PUT http://localhost:5000/empleados/2
+content-type: application/json
+
+{
+    "nombre": "MArty",
+    "apellido": "Ruiz",
+    "puesto": "MArketing",
+    "huella": "huella456",
+    "horarioDeEntrada": "09:00",
+    "horarioDeSalida": "18:00"
+}
+
+
+###
+POST http://localhost:5000/empleados
+content-type: application/json
+
+{
+    "nombre": "Carla",
+    "apellido": "gutierrez",
+    "puesto": "limpieza",
+    "huella": "huella456",
+    "horarioDeEntrada": "07:00:00",
+    "horarioDeSalida": "12:00:00"
+}
+
+###
+DELETE  http://localhost:5000/empleados/2
