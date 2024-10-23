@@ -1,5 +1,5 @@
-import { validacionCompleta as validaEmpCom  } from "../schemaEmpleado.js"
-import { empleados } from "../empleados.js"
+import { validacionCompleta as validaEmpCom  } from "../validadores/schemaEmpleado.js"
+import { empleados } from "../db/local/empleados.js"
 
 
 export const obtenerEmpleados = (req, res)=> {

@@ -1,6 +1,6 @@
 import express, { json } from "express"
-import clientes from "./clientes.js"
-import {validacionCompleta, validacionParcial} from "./schemaCliente.js"
+import clientes from "./db/local/clientes.js"
+import {validacionCompleta, validacionParcial} from "./validadores/schemaCliente.js"
 
 import { empleadoRouter } from "./router/empleadoRouter.js"
 import { ordenRouter } from "./router/ordenesRouter.js"

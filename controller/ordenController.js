@@ -1,5 +1,5 @@
-import { validacionCompleta as valOrden, validacionCompleta as valOrdenParcial } from "../schemaOrder.js"
-import { ordenes } from "../ordenes.js"
+import { validacionCompleta as valOrden, validacionCompleta as valOrdenParcial } from "../validadores/schemaOrder.js"
+import { ordenes } from "../db/local/ordenes.js"
 
 export const obtenerOrdenes = (req, res) => {
     res.json(  ordenes)
