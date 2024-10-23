@@ -9,6 +9,7 @@ import { ordenRouter } from "./router/ordenesRouter.js"
 const app = express()
 app.use(express.json())
 app.disable("x-powered-by")
+//router
 app.use("/empleados", empleadoRouter)
 app.use("/ordenes", ordenRouter)
 
