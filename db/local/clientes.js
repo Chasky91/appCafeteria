@@ -2,19 +2,20 @@ const clientes = [
     {
         "id": 1,
         "nombre": "Jose",
-        "Apellido":"Ruiz",
+        "apellido":"Ruiz",
 
 
     },
     {
         "id": 2,
         "nombre": "Esteba",
-        "Apellido":"Quito",
+        "apellido":"Quito",
 
     },
     {
         "id": 3,
         "nombre": 'Juan Gómez',
+        "apellido":"Quito",
         "email": 'juan.gomez@example.com',
 
     },
@@ -22,7 +23,7 @@ const clientes = [
         "id":4,
         "nombre": 'Carlos Rodríguez',
         "email": 'carlos.rodriguez@example.com',
-        "Apellido":"Quito",
+        "apellido":"Quito",
     }    
 
 

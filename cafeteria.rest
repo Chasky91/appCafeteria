@@ -25,7 +25,7 @@ content-type: application/json
  {
     "nombre": "",
     "email": "FErnando.Estelar@example.com",
-    "Apellido":"Estelar"
+    "apellido":"Estelar"
 } 
 
 ###

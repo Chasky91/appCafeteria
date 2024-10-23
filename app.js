@@ -3,11 +3,15 @@ import express, { json } from "express"
 import { empleadoRouter } from "./router/empleadoRouter.js"
 import { ordenRouter } from "./router/ordenesRouter.js"
 import { clienteRouter } from "./router/clienteRouter.js"
+import { corsCafeteria } from "./cors.js"
 
 
 const app = express()
 app.use(express.json())
 app.disable("x-powered-by")
+
+app.use(corsCafeteria())
+
 //routers
 app.use("/empleados", empleadoRouter)
 app.use("/ordenes", ordenRouter)
