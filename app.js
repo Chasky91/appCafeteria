@@ -23,13 +23,10 @@ const PUERTO = 5000
 //http://localhost:5000/"
 //La linea siguiente es un endpoint
 
-//http://localhost:5000/alumnos
 app.get('/', (req, res) => {
 
-    //primera respuesta
     res.send("<h1>Hola CENT 444</h1>");
-    //segunda respuesta Prohibida arroja errores
-    //res.send("<h1>Hola CENT 4</h1>");
+
 })
 
 
